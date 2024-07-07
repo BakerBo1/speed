@@ -1,3 +1,15 @@
+local function callback(Text)
+end
+ 
+local NotificationBindable = Instance.new("BindableFunction")
+NotificationBindable.OnInvoke = callback
+ 
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Speed";
+    Text = "Speed toggle is t";
+    Duration = "5";
+    Callback = NotificationBindable;
+})
 local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 local player = game.Players.LocalPlayer
